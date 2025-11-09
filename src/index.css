@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Chinese Rocks';
+  src: url('./assets/fonts/chinese-rocks-rg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplicar la fuente a todo el HTML y body */
+html, body, #root {
+  height: 100%;
+  background-color: black;
+  font-family: 'Chinese Rocks', sans-serif; /* <- aquí se aplica globalmente */
+  color: white; /* opcional para asegurar que el texto sea visible sobre fondo negro */
+}
