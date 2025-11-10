@@ -22,5 +22,31 @@ nav a{
   text-align: center;
 }
 .shadow-red:hover{
-  filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.466));
+  filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.862));
+}
+.gradient-red{
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.15) 0%, rgba(0, 0, 0, 1) 70%);
+}
+.gradient-green{
+  background: radial-gradient(circle, rgba(0, 255, 8, 0.15) 0%, rgba(0, 0, 0, 1) 70%);
+}
+.gradient-yellow{
+  background: radial-gradient(circle, rgba(255, 247, 0, 0.15) 0%, rgba(0, 0, 0, 1) 70%);
+}
+.gradient-blue{
+  background: radial-gradient(circle, rgba(13, 0, 255, 0.15) 0%, rgba(0, 0, 0, 1) 70%);
+}
+.gradient-orange{
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.15) 0%, rgba(0, 0, 0, 1) 70%);
+}
+.gradient-violet{
+  background: radial-gradient(circle, rgba(255, 0, 187, 0.15) 0%, rgba(0, 0, 0, 1) 70%);
+}
+.background-galaxy{
+  background: #4800ff80;
+  background: linear-gradient(90deg, rgba(72, 0, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.background-galaxy-hover{
+  background: linear-gradient(90deg, rgb(8, 0, 28) 0%, rgba(0, 0, 0, 0) 100%);
+
 }

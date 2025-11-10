@@ -7,7 +7,7 @@ export default function PlaylistsHenryFlip() {
       link: "https://www.youtube.com/playlist?list=PLJJufpN_mZ_V1uOZdj-v4ZViRDeHGJruO",
       songs: [
         { title: "La Tumba (Nov - 2022)", link: "https://www.youtube.com/watch?v=fLEfBJDnUuA" },
-        { title: "El Club de los Retardados (Nov - 2022)", link: "https://www.youtube.com/watch?v=zhfMNegGPnQ" },
+        { title: "Club de los Retardados (Nov - 2022)", link: "https://www.youtube.com/watch?v=zhfMNegGPnQ" },
         { title: "Turbio Rio (Nov - 2022)", link: "https://www.youtube.com/watch?v=M00Dkw9m8kI" },
       ],
     },
@@ -44,14 +44,15 @@ export default function PlaylistsHenryFlip() {
   };
 
   return (
-    <div className="w-6/8 bg-black text-white py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
+    <div className="w-6/8  text-white py-16 relative">
+      <div className=" gradient-red absolute z-10" style={{width: '600px', height: '600px', left: '6rem', top: '20rem'}}></div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 z-20 relative">
         {playlists.map((playlist, i) => {
           const [currentVideo, setCurrentVideo] = useState(playlist.songs[0].link);
           return (
             <div
               key={i}
-              className="flex flex-col items-center rounded-2xl p-6 shadow-lg"
+              className="flex flex-col items-center rounded-2xl p-6 shadow-lg "
             >
               {/* Título */}
               <a
@@ -82,8 +83,8 @@ export default function PlaylistsHenryFlip() {
                     onClick={() => setCurrentVideo(song.link)}
                     className={`w-full text-left px-4 py-2  transition-colors duration-200 hover:cursor-pointer ${
                       currentVideo === song.link
-                        ? "bg-red-900 font-bold"
-                        : " hover:bg-gray-800"
+                        ? "background-galaxy font-bold"
+                        : "background-galaxy-hover"
                     }`}
                   >
                     {song.title}
