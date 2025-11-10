@@ -1,12 +1,14 @@
 import logo from "./assets/logo.png";
 import IntegrantesParallax from "./componentes/IntegrantesParallax";
 import YouTubeCD from "./componentes/YouTubeCD";
+import ContactoHenryFlip from "./componentes/ContactoHenryFlip";
+import PlaylistHenryFlip from "./componentes/PlaylistHenryFlip";
 
 function App() {
   return (
     <div className="min-h-screen text-white flex flex-col bg-black">
       {/* Header fijo */}
-      <header className="fixed top-0 left-0 w-full py-2 flex  items-center justify-center gap-64 px-8 z-50 bg-black bg-opacity-80 backdrop-blur-sm">
+      <header  className="fixed top-0 left-0 w-full py-2 flex  items-center justify-center gap-64 px-8 z-50 bg-black bg-opacity-80 backdrop-blur-sm">
         {/* Sección izquierda */}
         <nav className="flex gap-6 text-sm uppercase tracking-widest font-chinese">
           <a href="#banda" className="hover:text-red-800 transition">
@@ -18,7 +20,7 @@ function App() {
         </nav>
 
         {/* Logo centrado (con overflow visible por arriba del header) */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-6 z-50">
+        <div className="absolute left-1/2 -translate-x-1/2 top-2 z-50">
           <img
             src={logo}
             alt="Logo"
@@ -43,8 +45,15 @@ function App() {
           <IntegrantesParallax />
         </section>
 
-        <section className="w-full h-screen z-40" style={{marginTop: '400px'}}>
+        <section className="w-full z-40" style={{marginTop: '400px'}}>
           <YouTubeCD />
+        </section>
+
+        <section className="">
+          <ContactoHenryFlip />
+        </section>
+        <section className="w-full flex justify-center">
+          <PlaylistHenryFlip />
         </section>
       </main>
     </div>

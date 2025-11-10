@@ -14,3 +14,13 @@ html, body, #root {
   font-family: 'Chinese Rocks', sans-serif; /* <- aquí se aplica globalmente */
   color: white; /* opcional para asegurar que el texto sea visible sobre fondo negro */
 }
+header{
+  @apply font-bold
+}
+nav a{
+  width: 150px;
+  text-align: center;
+}
+.shadow-red:hover{
+  filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.466));
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import lucas from "../assets/lucas.png";
-import amaru from "../assets/amaru2.png";
+import amaru from "../assets/amaru.png";
 import emi from "../assets/emi.png";
 import gonza from "../assets/gonza.png";
 import fran from "../assets/fran.png";
@@ -16,17 +16,23 @@ export default function IntegrantesParallax() {
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center bg-black w-full" style={{ height: "200vh" }}>
+    <div
+      className="relative flex justify-center items-center bg-black w-full"
+      style={{ height: "200vh" }}
+    >
       {/* Contenedor principal (sin overflow) */}
       <div className="absolute top-0 h-[100vh] w-full">
         {/* Fila superior (3 imágenes) */}
-        <div className="absolute h-screen w-full justify-center gap-12">
+        <div className="absolute h-screen w-full justify-center flex gap-12">
           <img
             src={emi}
             alt="Emi"
-            className="absolute object-cover rounded-2xl shadow-lg"
+            className="absolute object-cover rounded-2xl shadow-lg mt-16"
             style={{
-              transform: `translateY(${scrollY * 0.2}px)`,
+              width: "40%",
+              marginTop: "-2rem",
+              transform: `translate(-70%, ${scrollY * 0.2}px)`,
+              filter: "hue-rotate(280deg) brightness(1.1)", // violeta
             }}
           />
           <img
@@ -34,15 +40,20 @@ export default function IntegrantesParallax() {
             alt="Amaru"
             className="absolute object-cover rounded-2xl shadow-lg"
             style={{
-              transform: `translateY(${scrollY * 0.5}px)`,
+              width: "50%",
+              transform: `translate(0%, ${scrollY * 0.5}px)`,
+              filter: "hue-rotate(0deg)", // rojo
             }}
           />
           <img
-            src={fran}
-            alt="Fran"
-            className="absolute object-cover rounded-2xl shadow-lg z-10"
+            src={gonza}
+            alt="Gonza"
+            className="absolute object-cover rounded-2xl shadow-lg"
             style={{
-              transform: `translateY(${scrollY * 0.3}px)`,
+              width: "50%",
+              marginTop: "-2rem",
+              transform: `translate(45%, ${scrollY * 0.2}px)`,
+              filter: "hue-rotate(120deg) brightness(1.2)", // verde brillante
             }}
           />
         </div>
@@ -54,15 +65,21 @@ export default function IntegrantesParallax() {
             alt="Lucas"
             className="absolute object-cover rounded-2xl shadow-lg z-20"
             style={{
-              transform: `translateY(${scrollY * 0.3}px)`,
+              width: "45%",
+              marginTop: "14rem",
+              transform: `translate(-45%, ${scrollY * 0.3}px)`,
+              filter: "hue-rotate(240deg)", // azul
             }}
           />
           <img
-            src={gonza}
-            alt="Gonza"
-            className="absolute object-cover rounded-2xl shadow-lg"
+            src={fran}
+            alt="Fran"
+            className="absolute object-cover rounded-2xl shadow-lg z-10"
             style={{
-              transform: `translateY(${scrollY * 0.2}px)`,
+              width: "40%",
+              marginTop: "18rem",
+              transform: `translate(45%, ${scrollY * 0.3}px)`,
+              filter: "hue-rotate(60deg) brightness(1.3)", // amarillo brillante
             }}
           />
         </div>
